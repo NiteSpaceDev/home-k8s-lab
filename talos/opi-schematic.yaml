@@ -1,0 +1,10 @@
+overlay:
+    image: siderolabs/sbc-rockchip
+    name: orangepi-5-plus
+customization:
+    systemExtensions:
+        officialExtensions:
+            - siderolabs/iscsi-tools
+            - siderolabs/nfsd
+            - siderolabs/nvme-cli
+            - siderolabs/util-linux-tools

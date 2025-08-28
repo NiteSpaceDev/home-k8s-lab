@@ -1,0 +1,7 @@
+customization:
+    systemExtensions:
+        officialExtensions:
+            - siderolabs/intel-ice-firmware
+            - siderolabs/nfsd
+            - siderolabs/nvme-cli
+            - siderolabs/util-linux-tools
