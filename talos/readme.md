@@ -5,6 +5,13 @@ https://factory.talos.dev/image/735e260d81298f47c877b7feeff47712bf1bcda73fcb916b
 
 
 VM:
-Schematic: 62d764ce32db60e6a2420ce82e25d544dec5379d2b2eebb9a21479fa62425e83
-https://factory.talos.dev/image/62d764ce32db60e6a2420ce82e25d544dec5379d2b2eebb9a21479fa62425e83/v1.10.7/metal-amd64.iso
+Schematic:  b53b9b200a34348f1c7c7d103c31be94b4ea1e12ce2ccb223065e0c807182449
+factory.talos.dev/metal-installer/b53b9b200a34348f1c7c7d103c31be94b4ea1e12ce2ccb223065e0c807182449:v1.10.7
+https://factory.talos.dev/image/b53b9b200a34348f1c7c7d103c31be94b4ea1e12ce2ccb223065e0c807182449/v1.10.7/metal-amd64.iso
+
+
+Zotac:
+Schematic:  b53b9b200a34348f1c7c7d103c31be94b4ea1e12ce2ccb223065e0c807182449
+factory.talos.dev/metal-installer/b53b9b200a34348f1c7c7d103c31be94b4ea1e12ce2ccb223065e0c807182449:v1.10.7
+https://factory.talos.dev/image/b53b9b200a34348f1c7c7d103c31be94b4ea1e12ce2ccb223065e0c807182449/v1.10.7/metal-amd64.iso
 
