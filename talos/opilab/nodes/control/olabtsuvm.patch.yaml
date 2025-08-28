@@ -1,0 +1,19 @@
+machine:
+  install:
+    disk: /dev/sda # The disk used for installations.
+    image: factory.talos.dev/installer/62d764ce32db60e6a2420ce82e25d544dec5379d2b2eebb9a21479fa62425e83:v1.10.7 # Allows for supplying the image used to perform the installation.
+  ###########################
+  # STATIC IP CONFIGURATION #
+  ###########################
+
+  network:
+    hostname: olabtsuvm.nite.name
+    interfaces:
+      - deviceSelector:
+          physical: true 
+        addresses:
+          - 192.168.4.115/24
+        routes:
+          - network: 0.0.0.0/0 # The route's network.
+            gateway: 192.168.4.1 # The route's gateway.
+        dhcp: false

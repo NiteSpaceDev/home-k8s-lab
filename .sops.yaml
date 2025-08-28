@@ -5,3 +5,5 @@ creation_rules:
   - path_regex: .*.yaml
     encrypted_regex: ^(data|stringData)$
     age: age16khheln7aqhe8atf8ggxvykdqspsqpwgq5yw3y7l9zn8ezf2zausll77wa
+  - path_regex: .*.talosconfig
+    age: age16khheln7aqhe8atf8ggxvykdqspsqpwgq5yw3y7l9zn8ezf2zausll77wa
