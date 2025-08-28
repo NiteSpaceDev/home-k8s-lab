@@ -1,0 +1,7 @@
+creation_rules:
+  - path_regex: talos/.*.yaml
+    encrypted_regex: ^(data|stringData|crt|secret|id|token|key|secretboxEncryptionSecret)$
+    age: age16khheln7aqhe8atf8ggxvykdqspsqpwgq5yw3y7l9zn8ezf2zausll77wa
+  - path_regex: .*.yaml
+    encrypted_regex: ^(data|stringData)$
+    age: age16khheln7aqhe8atf8ggxvykdqspsqpwgq5yw3y7l9zn8ezf2zausll77wa
