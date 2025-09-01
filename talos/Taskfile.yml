@@ -22,6 +22,13 @@ tasks:
       - talosctl apply -n 192.168.4.62 -i -f opilab/opilab-ohm-talos.yaml
       - talosctl apply -n 192.168.4.47 -i -f opilab/opilab-olabsumuvm.yaml
 
+  bootstrap:
+    desc: Bootstrap Talos
+    run: once
+    silent: false
+    cmds:
+      - talosctl bootstrap -n 192.168.4.114
+
 
   update:
     desc: Apply updated config to nodes
@@ -32,3 +39,11 @@ tasks:
     cmds:
       - talosctl apply -n 192.168.4.114 -f opilab/opilab-ohm-talos.yaml
       - talosctl apply -n 192.168.4.116 -f opilab/opilab-olabsumuvm.yaml
+
+  netsetup:
+    desc: Initialize Cilium on a new cluster
+    run: once
+    silent: false
+    cmds:
+      - helm repo add cilium https://helm.cilium.io/
+      - helm install cilium cilium/cilium --version 1.18.1 --namespace kube-system --values ../network/cilium/values.yaml

@@ -8,6 +8,16 @@ clusterPodNets:
 clusterSvcNets:
   - 10.96.0.0/12
 
+cniConfig:
+  name: none
+
+patches:
+  - |-
+    cluster:
+      proxy:
+        disabled: true
+
+
 nodes:
   - hostname: ohm-talos
     controlPlane: true
