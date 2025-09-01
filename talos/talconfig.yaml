@@ -1,0 +1,72 @@
+---
+clusterName: opilab
+endpoint: https://192.168.4.114:6443
+talosVersion: 1.11.0
+allowSchedulingOnMasters: true
+clusterPodNets:
+  - 10.244.0.0/16
+clusterSvcNets:
+  - 10.96.0.0/12
+
+nodes:
+  - hostname: ohm-talos
+    controlPlane: true
+    ipAddress: 192.168.4.114
+    installDisk: /dev/vda
+    networkInterfaces:
+      - deviceSelector:
+          driver: virtio_net
+        dhcp: false
+        addresses:
+          - 192.168.4.114/24
+        routes:
+          - network: 0.0.0.0/0
+            gateway: 192.168.4.1
+    nodeConfigs:
+      machineSpec:
+        mode: metal
+        arch: arm64
+  - hostname: olabsumuvm
+    controlPlane: false
+    ipAddress: 192.168.4.116
+    installDisk: /dev/sda
+    networkInterfaces:
+      - deviceSelector:
+          driver: hv_netvsc
+        dhcp: false
+        addresses:
+          - 192.168.4.116/24
+        routes:
+          - network: 0.0.0.0/0
+            gateway: 192.168.4.1
+
+controlPlane:
+  schematic:
+    customization:
+      systemExtensions:
+        officialExtensions:
+          - siderolabs/iscsi-tools
+          - siderolabs/nfsd
+          - siderolabs/nvme-cli
+          - siderolabs/qemu-guest-agent
+          - siderolabs/util-linux-tools
+  patches:
+    - |-
+      - op: add
+        path: /machine/network/nameservers
+        value:
+          - 192.168.4.205
+          - 192.168.4.181
+      - op: add
+        path: /machine/kubelet/extraArgs
+        value:
+          rotate-server-certificates: "true"
+
+worker:
+  patches:
+    - |-
+      - op: add
+        path: /machine/network/nameservers
+        value:
+          - 192.168.4.205
+          - 192.168.4.181
