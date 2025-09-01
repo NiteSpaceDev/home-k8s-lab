@@ -1,0 +1,9 @@
+---
+clusterName: opilab
+endpoint: https://192.168.4.114:6443
+nodes:
+  - hostname: ohm-talos
+    controlPlane: true
+    ipAddress: 192.168.4.114
+    installDisk: /dev/vda
+
