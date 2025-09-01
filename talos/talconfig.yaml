@@ -57,11 +57,11 @@ controlPlane:
         value:
           - 192.168.4.205
           - 192.168.4.181
-      - op: add
-        path: /machine/kubelet/extraArgs
-        value:
-          rotate-server-certificates: "true"
-
+            #      - op: add
+            #        path: /machine/kubelet/extraArgs
+            #        value:
+            #          rotate-server-certificates: "true"
+            #
 worker:
   patches:
     - |-
