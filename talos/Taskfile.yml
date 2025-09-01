@@ -10,3 +10,25 @@ tasks:
     cmds:
       - talhelper genconfig -o opilab
     silent: true
+
+
+  initnodes:
+    desc: Apply initial config to 'fresh' nodes
+    run: once
+    silent: false
+    deps:
+      - gen
+    cmds:
+      - talosctl apply -n 192.168.4.62 -i -f opilab/opilab-ohm-talos.yaml
+      - talosctl apply -n 192.168.4.47 -i -f opilab/opilab-olabsumuvm.yaml
+
+
+  update:
+    desc: Apply updated config to nodes
+    run: once
+    silent: false
+    deps:
+      - gen
+    cmds:
+      - talosctl apply -n 192.168.4.114 -f opilab/opilab-ohm-talos.yaml
+      - talosctl apply -n 192.168.4.116 -f opilab/opilab-olabsumuvm.yaml
