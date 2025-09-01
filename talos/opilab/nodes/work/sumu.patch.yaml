@@ -1,0 +1,19 @@
+machine:
+  install:
+    disk: /dev/sda # The disk used for installations.
+    image: factory.talos.dev/metal-installer/b53b9b200a34348f1c7c7d103c31be94b4ea1e12ce2ccb223065e0c807182449:v1.10.7
+  ###########################
+  # STATIC IP CONFIGURATION #
+  ###########################
+
+  network:
+    hostname: olabsumuvm.nite.name
+    interfaces:
+      - deviceSelector:
+          physical: true 
+        addresses:
+          - 192.168.4.116/24
+        routes:
+          - network: 0.0.0.0/0 # The route's network.
+            gateway: 192.168.4.1 # The route's gateway.
+        dhcp: false
