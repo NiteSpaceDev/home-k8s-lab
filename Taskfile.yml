@@ -6,4 +6,4 @@ tasks:
   fluxinit:
     desc: Bootstrap Flux for cluster
     cmds:
-      - flux bootstrap github --token-auth --owner=nitespacedev --repository=home-k8s-lab --branch=main --path=clusters/opilab
+      - cat ~/.gitpat | flux bootstrap github --token-auth --owner=nitespacedev --repository=home-k8s-lab --branch=main --path=clusters/opilab
