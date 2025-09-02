@@ -1,10 +1,10 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: rook-ceph-common
+  name: rook-ceph-operator
   namespace: rook-ceph
 spec:
-  path: ./storage/Rook-Ceph/Common
+  path: ./storage/Rook-Ceph/operator
   prune: true
   interval: 5m
   sourceRef:
