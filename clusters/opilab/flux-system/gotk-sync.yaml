@@ -12,6 +12,10 @@ spec:
   secretRef:
     name: flux-system
   url: https://github.com/nitespacedev/home-k8s-lab.git
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-key
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
