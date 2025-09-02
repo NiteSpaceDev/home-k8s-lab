@@ -16,7 +16,8 @@ spec:
         namespace: kube-system
       interval: 1m
   values:
-    ipam: mode kubernetes
+    ipam:
+      mode: kubernetes
     hostFirewall:
       enabled: false
     hubble:
