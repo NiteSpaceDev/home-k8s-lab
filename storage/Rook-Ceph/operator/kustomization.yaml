@@ -3,3 +3,4 @@ kind: Kustomization
 namespace: rook-ceph
 resources:
   - repo.yaml
+  - release.yaml
