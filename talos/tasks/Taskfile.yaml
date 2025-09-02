@@ -4,6 +4,9 @@ version: '3'
 
 includes:
   init:
-    taskfile: ./init.yaml
+    taskfile: ./nodes.yaml
+    vars:
+      SECURE: " -i"
   update:
-    taskfile: ./update.yaml
+    taskfile: ./nodes.yaml
+      SECURE: " "

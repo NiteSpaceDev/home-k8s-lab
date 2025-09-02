@@ -1,0 +1,37 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  all:
+    desc: Apply config to Cluster
+    run: once
+    silent: false
+    deps:
+      - ohm
+      - tsu
+      - sumu
+
+  ohm:
+    desc: Config ohm-talos
+    dir: ../opilab
+    vars:
+      NAME: ohm-talos
+    cmds:
+      - talosctl apply -n {{.NAME}}.nite.name -f opilab-{{.NAME}}.yaml {{.SECURE}}
+
+  tsu:
+    desc: Config Tsukuru vm
+    dir: ../opilab
+    vars:
+      NAME: olabtsuvm
+    cmds:
+      - talosctl apply -n {{.NAME}}.nite.name -f opilab-{{.NAME}}.yaml {{.SECURE}}
+
+  sumu:
+    desc: Config Sumu VM
+    dir: ../opilab
+    vars:
+      NAME: olabsumuvm
+    cmds:
+      - talosctl apply -n {{.NAME}}.nite.name -f opilab-{{.NAME}}.yaml {{.SECURE}}

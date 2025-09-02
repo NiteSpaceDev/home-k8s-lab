@@ -21,47 +21,24 @@ patches:
 nodes:
   - hostname: ohm-talos
     controlPlane: true
-    ipAddress: 192.168.4.114
+    ipAddress: 192.168.5.10
     installDisk: /dev/vda
-    networkInterfaces:
-      - deviceSelector:
-          driver: virtio_net
-        dhcp: false
-        addresses:
-          - 192.168.4.114/24
-        routes:
-          - network: 0.0.0.0/0
-            gateway: 192.168.4.1
     nodeConfigs:
       machineSpec:
         mode: metal
         arch: arm64
   - hostname: olabsumuvm
     controlPlane: false
-    ipAddress: 192.168.4.116
+    ipAddress: 192.168.5.15
     installDisk: /dev/sda
-    networkInterfaces:
-      - deviceSelector:
-          driver: hv_netvsc
-        dhcp: false
-        addresses:
-          - 192.168.4.116/24
-        routes:
-          - network: 0.0.0.0/0
-            gateway: 192.168.4.1
   - hostname: olabtsuvm
     controlPlane: false
-    ipAddress: 192.168.4.115
+    ipAddress: 192.168.5.16
     installDisk: /dev/sda
-    networkInterfaces:
-      - deviceSelector:
-          driver: hv_netvsc
-        dhcp: false
-        addresses:
-          - 192.168.4.115/24
-        routes:
-          - network: 0.0.0.0/0
-            gateway: 192.168.4.1
+  - hostname: kitchen
+    controlPlane: false
+    ipAddress: 192.168.5.19
+    installDisk: /dev/sda
 
 controlPlane:
   schematic:
