@@ -29,6 +29,8 @@ spec:
         clusterDomain: cluster.local
     etcd:
       clusterDomain: cluster.local
+    securityContext:
+      privileged: true
     capabilities:
       ciliumAgent:
       - CHOWN
