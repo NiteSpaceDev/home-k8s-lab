@@ -26,9 +26,9 @@ spec:
       ui:
         enabled: true
       peerService:
-        clusterDomain: opilab.nite.name
+        clusterDomain: cluster.local
     etcd:
-      clusterDomain: opilab.nite.name
+      clusterDomain: cluster.local
     capabilities:
       ciliumAgent:
       - CHOWN
