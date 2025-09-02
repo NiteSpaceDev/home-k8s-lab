@@ -1,0 +1,31 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  all:
+    desc: Apply updated config
+    run: once
+    silent: false
+    deps:
+      - ohm
+      - tsu
+      - sumu
+
+  ohm:
+    desc: Update config for talos vm
+    dir: ../opilab
+    cmds:
+      - talosctl apply -n 192.168.4.114 -f opilab-ohm-talos.yaml
+
+  tsu:
+    desc: Update config for tsukuru
+    dir: ../opilab
+    cmds:
+      - talosctl apply -n 192.168.4.115 -f opilab-olabtsuvm.yaml
+
+  sumu:
+    desc: Update config for sumu
+    dir: ../opilab
+    cmds:
+      - talosctl apply -n 192.168.4.116 -f opilab-olabsumuvm.yaml

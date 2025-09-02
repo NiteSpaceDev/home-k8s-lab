@@ -1,0 +1,31 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  all:
+    desc: Apply initial config to 'fresh' nodes
+    run: once
+    silent: false
+    deps:
+      - ohm
+      - tsu
+      - sumu
+
+  ohm:
+    desc: First time init of talos vm
+    dir: ../opilab
+    cmds:
+      - talosctl apply -n 192.168.4.62 -i -f opilab-ohm-talos.yaml
+
+  tsu:
+    desc: First time init of tsukuru
+    dir: ../opilab
+    cmds:
+      - talosctl apply -n 192.168.4.46 -i -f opilab-olabtsuvm.yaml
+
+  sumu:
+    desc: First time init of sumu
+    dir: ../opilab
+    cmds:
+      - talosctl apply -n 192.168.4.47 -i -f opilab-olabsumuvm.yaml

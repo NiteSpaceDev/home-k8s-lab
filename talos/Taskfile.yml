@@ -2,25 +2,21 @@
 
 version: '3'
 
+includes:
+  nodes:
+    taskfile: ./tasks
+    flatten: true
+
 tasks:
   gen:
     desc: Gen config files for all nodes
     sources:
       - talconfig.yaml
+    generates:
+      - opilab/*yaml
     cmds:
       - talhelper genconfig -o opilab
     silent: true
-
-
-  initnodes:
-    desc: Apply initial config to 'fresh' nodes
-    run: once
-    silent: false
-    deps:
-      - gen
-    cmds:
-      - talosctl apply -n 192.168.4.62 -i -f opilab/opilab-ohm-talos.yaml
-      - talosctl apply -n 192.168.4.47 -i -f opilab/opilab-olabsumuvm.yaml
 
   bootstrap:
     desc: Bootstrap Talos
@@ -30,6 +26,14 @@ tasks:
       - talosctl bootstrap -n 192.168.4.114
 
 
+  initnodes:
+    desc: Initialize nodes
+    run: once
+    deps:
+      - gen
+    cmds:
+      - task: init:all
+
   update:
     desc: Apply updated config to nodes
     run: once
@@ -37,8 +41,7 @@ tasks:
     deps:
       - gen
     cmds:
-      - talosctl apply -n 192.168.4.114 -f opilab/opilab-ohm-talos.yaml
-      - talosctl apply -n 192.168.4.116 -f opilab/opilab-olabsumuvm.yaml
+      - task: update:all
 
   netsetup:
     desc: Initialize Cilium on a new cluster

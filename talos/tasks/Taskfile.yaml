@@ -1,0 +1,9 @@
+# https://taskfile.dev
+
+version: '3'
+
+includes:
+  init:
+    taskfile: ./init.yaml
+  update:
+    taskfile: ./update.yaml

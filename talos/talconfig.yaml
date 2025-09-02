@@ -49,6 +49,19 @@ nodes:
         routes:
           - network: 0.0.0.0/0
             gateway: 192.168.4.1
+  - hostname: olabtsuvm
+    controlPlane: false
+    ipAddress: 192.168.4.115
+    installDisk: /dev/sda
+    networkInterfaces:
+      - deviceSelector:
+          driver: hv_netvsc
+        dhcp: false
+        addresses:
+          - 192.168.4.115/24
+        routes:
+          - network: 0.0.0.0/0
+            gateway: 192.168.4.1
 
 controlPlane:
   schematic:
