@@ -48,7 +48,7 @@ spec:
       - NET_ADMIN
       - SYS_ADMIN
       - SYS_RESOURCE
-    kubeProxyReplacement: "true"
+    kubeProxyReplacement: true
     cgroup:
       autoMount:
         enabled: false
@@ -59,6 +59,6 @@ spec:
       qps: 100
       burst: 500
     l2announcements:
-      enabled: "true"
+      enabled: true
     externalIPs:
-      enabled: "true"
+      enabled: true
