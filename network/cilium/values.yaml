@@ -100,14 +100,14 @@ k8sClientRateLimit:
   # @schema
   # -- (int) The sustained request rate in requests per second.
   # @default -- 10
-  qps:
+  qps: 100
   # @schema
   # type: [null, integer]
   # @schema
   # -- (int) The burst request rate in requests per second.
   # The rate limiter will allow short bursts with a higher rate.
   # @default -- 20
-  burst:
+  burst: 500
   # -- Configure the client side rate limit for the Cilium Operator
   operator:
     # @schema
@@ -457,7 +457,7 @@ nat46x64Gateway:
 # -- Configure L2 announcements
 l2announcements:
   # -- Enable L2 announcements
-  enabled: false
+  enabled: true
   # -- If a lease is not renewed for X duration, the current leader is considered dead, a new leader is picked
   # leaseDuration: 15s
   # -- The interval at which the leader will renew the lease
