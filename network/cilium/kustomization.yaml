@@ -5,3 +5,4 @@ resources:
   - repo.yaml
   - release.yaml
   - lanpool.yaml
+  - l2announce.yaml
