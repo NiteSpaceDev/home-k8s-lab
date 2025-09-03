@@ -1,6 +1,6 @@
 ---
 clusterName: opilab
-endpoint: https://192.168.4.114:6443
+endpoint: https://192.168.5.10:6443
 talosVersion: 1.11.0
 allowSchedulingOnMasters: true
 clusterPodNets:
@@ -35,10 +35,6 @@ nodes:
     controlPlane: false
     ipAddress: 192.168.5.16
     installDisk: /dev/sda
-  - hostname: kitchen
-    controlPlane: false
-    ipAddress: 192.168.5.19
-    installDisk: /dev/sda
 
 controlPlane:
   schematic:
@@ -55,6 +51,7 @@ controlPlane:
       - op: add
         path: /machine/network/nameservers
         value:
+          - 192.168.4.140
           - 192.168.4.205
           - 192.168.4.181
             #      - op: add
@@ -68,5 +65,6 @@ worker:
       - op: add
         path: /machine/network/nameservers
         value:
+          - 192.168.4.140
           - 192.168.4.205
           - 192.168.4.181

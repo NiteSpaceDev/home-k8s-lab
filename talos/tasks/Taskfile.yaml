@@ -9,4 +9,5 @@ includes:
       SECURE: " -i"
   update:
     taskfile: ./nodes.yaml
+    vars:
       SECURE: " "

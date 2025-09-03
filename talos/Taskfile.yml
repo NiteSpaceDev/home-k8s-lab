@@ -23,7 +23,7 @@ tasks:
     run: once
     silent: false
     cmds:
-      - talosctl bootstrap -n 192.168.4.114
+      - talosctl bootstrap -n ohm-talos
 
 
   initnodes:

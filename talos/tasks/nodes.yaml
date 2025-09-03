@@ -35,3 +35,11 @@ tasks:
       NAME: olabsumuvm
     cmds:
       - talosctl apply -n {{.NAME}}.nite.name -f opilab-{{.NAME}}.yaml {{.SECURE}}
+
+  kitchen:
+    desc: Config Kitchen zotac
+    dir: ../opilab
+    vars:
+      NAME: kitchen
+    cmds:
+      - talosctl apply -n {{.NAME}}.nite.name -f opilab-{{.NAME}}.yaml {{.SECURE}}
