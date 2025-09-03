@@ -27,7 +27,7 @@ spec:
         enabled: true
         allowExternalNameServices: true
         allowCrossNamespaces: true
-        ingressClass: traefik-lan
+        ingressClass: traefik-external
       kubernetesIngress:
         enabled: true
         allowExternalNameServices: true
