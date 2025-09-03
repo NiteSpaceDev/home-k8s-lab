@@ -48,10 +48,15 @@ spec:
       - NET_ADMIN
       - SYS_ADMIN
       - SYS_RESOURCE
-    kubeProxyReplacement: 
+    kubeProxyReplacement: true
     cgroup:
       autoMount:
         enabled: false
       hostRoot: /sys/fs/cgroup
     k8sServiceHost: "localhost"
     k8sServicePort: "7445"
+    k8sClientRateLimit:
+      qps: 100
+      burst: 500
+    l2announcements:
+      enabled: true
