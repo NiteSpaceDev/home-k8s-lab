@@ -6,7 +6,7 @@ metadata:
     color: green
 spec:
   selector:
-    app: hubble-ui
+    k8s-app: hubble-ui
   type: LoadBalancer
   ports:
     - protocol: TCP
