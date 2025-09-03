@@ -16,6 +16,16 @@ spec:
         namespace: traefik
       interval: 1m
   values:
+    providers:
+      kubernetesCRD:
+        enabled: true
+        allowExternalNameServices: true
+        allowCrossNamespaces: true
+        ingressClass: traefik-lan
+      kubernetesIngress:
+        enabled: false
+      kubernetesGateway:
+        enabled: true
     ports:
       web:
         port: 80
@@ -31,16 +41,6 @@ spec:
     api:
       dashboard: true
       insecure: true
-    providers:
-      kubernetesCRD:
-        enabled: true
-        allowExternalNameServices: true
-        allowCrossNamespaces: true
-        ingressClass: traefik-lan
-      kubernetesIngress:
-        enabled: false
-      kubernetesGateway:
-        enabled: true
     gateway:
       listeners:
         web:
