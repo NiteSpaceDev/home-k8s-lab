@@ -3,6 +3,9 @@ kind: CiliumLoadBalancerIPPool
 metadata:
   name: "lan-pool"
 spec:
-  cidrs:
+  blocks:
   - start: "192.168.5.100"
     stop: "192.168.5.130"
+  serviceSelector:
+    matchExpressions:
+      - {key: color, operator: In, values:[green]}
