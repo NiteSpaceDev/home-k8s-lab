@@ -40,19 +40,19 @@ spec:
       resources: #TODO:  Update requests and limits in "final" cluster
         mgr:
           limits:
-            memory: "1gi"
+            memory: "1Gi"
           requests:
             cpu: "100m"
             memory: "256Mi"
         mon:
           limits:
-            memory: "1gi"
+            memory: "1Gi"
           requests:
             cpu: "100m"
             memory: "256Mi"
         osd:
           limits:
-            memory: "2gi"
+            memory: "2Gi"
           requests:
             cpu: "100m"
             memory: "512Mi"
