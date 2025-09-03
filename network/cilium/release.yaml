@@ -60,3 +60,5 @@ spec:
       burst: 500
     l2announcements:
       enabled: true
+    externalIPs:
+      enabled: true
