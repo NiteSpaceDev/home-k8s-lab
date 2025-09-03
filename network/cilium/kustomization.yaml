@@ -6,3 +6,4 @@ resources:
   - release.yaml
   - lanpool.yaml
   - l2announce.yaml
+  - hubble-ingress.yaml
