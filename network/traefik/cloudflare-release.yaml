@@ -58,6 +58,6 @@ spec:
               group: ""
     service:
       enabled: true
-      type: ClusterIP
+      type: LoadBalancer
       annotations: {}
-      labels: { }
+      labels: { color: "green" }
