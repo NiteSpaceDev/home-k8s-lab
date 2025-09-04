@@ -18,23 +18,24 @@ spec:
           kind: TraefikService
   tls:
     secretName: traefik-dashboard-tls
-#---
-#apiVersion: traefik.io/v1alpha1
-#kind: IngressRoute
-#metadata:
-#  name: traefik-redirect
-#  namespace: traefik
-#  annotations: 
-#    kubernetes.io/ingress.class: traefik-external
-#spec:
-#  entryPoints:
-#    - web
-#  routes:
-#    - match: Host(`traefik.nite.name`)
-#      kind: Rule
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: traefik-cloudflare-dashboard
+  annotations: 
+    kubernetes.io/ingress.class: traefik-cloudflare
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`cfdash.nite.name`)
+      kind: Rule
 #      middlewares:
-#        - name: https-redirect
+#        - name: traefik-dashboard-basicauth
 #          namespace: traefik
-#      services:
-#        - name: api@internal
-#          kind: TraefikService
+      services:
+        - name: api@internal
+          kind: TraefikService
+  tls:
+    secretName: traefik-dashboard-cloudflare-tls
