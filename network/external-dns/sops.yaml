@@ -4,8 +4,12 @@ metadata:
     name: tsig-key
 type: Opaque
 stringData:
-    key: ENC[AES256_GCM,data:aZLd6AuS1btstCJZi/LzV4iAdKRSvK+dceK3qWFJuNqwDDnTgJdq7je8rw==,iv:X3J84lu3QO/cgPZ3sZ2JF+Djl/Z36oECCuYZ9Tekmpw=,tag:LRjg28AGbjBv9ITG3es8Ww==,type:str]
+    key: ENC[AES256_GCM,data:ClFHTG8PerIHlXq3OAlOpfsgd6VOSK5u4rqtfZnUtGp/I1z3r6W4SNqmWbg=,iv:i+jonbDWg52Gs3ZW+s3rf+zykFOLX4oJqehdxe6Uhqk=,tag:nXzFuYUh5eggUYpNvs57Uw==,type:str]
 sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
     age:
         - recipient: age16khheln7aqhe8atf8ggxvykdqspsqpwgq5yw3y7l9zn8ezf2zausll77wa
           enc: |
@@ -16,7 +20,8 @@ sops:
             bDBEREJQdktVZUFUd0dqZVRtRFVRSXcKcj5KDlBi/Syv8m13k3eyouMinjAey6Tm
             cSiSOiGK1nFvijmRDY6d6lxb6TtNFY+BuLusH2tP5ZsqRGlp+kprkQ==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2025-09-04T15:20:57Z"
-    mac: ENC[AES256_GCM,data:ZQjtVbcBdVteORHpPpBY+mH0hdLcaBse1hDpXEEQ+r0RoH62U1nbIkAh3jyd3s31eQ3tP0sCk80jgnuIHTusNh06GCUogaov5nLHMWkFiIFyHPYbUHd0FrmzxhHf0J9gViNK2t87DO3CfN5i5N6lcE6AzzrFyackw+QzbK6tpMU=,iv:bBoohgd1TJ0xb6LwCE6zxU07I+A0GK6l5OQTO59dzxU=,tag:sQvYEtThO3x54KIMqhaDjQ==,type:str]
+    lastmodified: "2025-09-04T15:50:20Z"
+    mac: ENC[AES256_GCM,data:wB9Xg9zb8w454UQVWbAoGCi8NepXTPLJ3DfNd92RIhX8wyl/68+hAu8HUhEmRkn58Zf28Ej8VSnqvB8Gu5E+rlnWo7e3Ik0mjcrF4fR95kFRAuuRl46fyfC318czRp1GfyrTaHoMeKfczkosabcNcAVA/0djiCwUOAnsdefkBic=,iv:AmTwHCW4yWd9EnmGtS2Ug+hPa+0q7Pk+vBwRu+BGZRc=,tag:v+BiC8XnpUjriWO8kHTRbg==,type:str]
+    pgp: []
     encrypted_regex: ^(data|stringData)$
     version: 3.10.2
