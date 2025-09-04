@@ -16,6 +16,7 @@ kind: IngressRoute
 metadata:
   name: traefik-dashboard
   annotations: 
+    external-dns.alpha.kubernetes.io/hostname: tfdash.nite.name
     kubernetes.io/ingress.class: traefik-lan
 spec:
   entryPoints:

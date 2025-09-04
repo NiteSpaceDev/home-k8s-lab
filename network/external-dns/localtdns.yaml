@@ -8,7 +8,7 @@ spec:
   chart:
     spec:
       chart: external-dns
-      version: ">=1.18.0 <=1.19.0"
+      version: ">=1.17.0"
       sourceRef:
         kind: HelmRepository
         name: external-dns
@@ -20,6 +20,7 @@ spec:
     sources:
       - service
       - ingress
+      - traefik-proxy
     provider:
       name: rfc2136
     extraArgs:
