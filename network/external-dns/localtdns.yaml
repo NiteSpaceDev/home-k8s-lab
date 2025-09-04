@@ -20,7 +20,6 @@ spec:
     sources:
       - service
       - ingress
-      - IngressRoute
     provider:
       name: rfc2136
     extraArgs:
