@@ -5,4 +5,3 @@ resources:
   - repo.yaml
   - release.yaml
   - sops.yaml
-  - letsencrypt.yaml
