@@ -5,3 +5,4 @@ resources:
   - repo.yaml
   - lan-release.yaml
   - cloudflare-release.yaml
+  - dashboard-ingress.yaml
