@@ -28,7 +28,7 @@ spec:
         count: 1
         allowMultiplePerNode: false
       dashboard:
-        enabled: false # We'll enable this later
+        enabled: true # We'll enable this later
         ssl: false
       crashCollector:
         disable: false
