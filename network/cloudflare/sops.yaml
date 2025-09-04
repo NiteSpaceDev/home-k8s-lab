@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Secret
 metadata:
-    name: cf-tunnel-credentials
+    name: traefik-cloudflare-tunnel
 type: Opaque
 stringData:
     TunnelSecret: ENC[AES256_GCM,data:dYID7tetRMkMZi+ceg8Hu0BetAuSsifpkQZPNLCt5bTQqtfX2A6tzvwnxCA=,iv:BXSrZPft3ii3XDoka641LZ3h5pDzw6/AP2CwxgvxF0w=,tag:DmbsX/UC7IsJ+Lku1n3mlg==,type:str]
@@ -23,8 +23,8 @@ sops:
             bDBEREJQdktVZUFUd0dqZVRtRFVRSXcKcj5KDlBi/Syv8m13k3eyouMinjAey6Tm
             cSiSOiGK1nFvijmRDY6d6lxb6TtNFY+BuLusH2tP5ZsqRGlp+kprkQ==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2025-09-04T18:16:06Z"
-    mac: ENC[AES256_GCM,data:ZFMDqArfG/aAr6XsyZBV6AKrbz5CtZJSOKsz7vsNiQUokyxQVurp+WOBaiE1N8eCsY2UBkSMIIPn4B952NniGu1oCzQYGRi2TryTFyV0Ay36pdHK/Oo8JSU3VQHixIqVoGQTe1OZuIvlKpMZIsgqzBYPSq3rXX4yEkvC0eb2ErI=,iv:zMNNPrasImBFN6QQk23ImGQRzzw8dIRvqgbjNOR/FXE=,tag:Vq1I9jdEcKM8+QDaXzIYPg==,type:str]
+    lastmodified: "2025-09-04T18:36:09Z"
+    mac: ENC[AES256_GCM,data:ak2k7vZ1mu6y6JFbR7g+qR/YzYRgcD29m4FPUozD/TSnTVryKcR7HWPB+xatJxFvKXIpbAGnqUGDdzNZ9KjHJ+dviP/QTXs1TGRHX7Z7+fPnKcXXMNC2OgU79ea6F/AHK+pzT5t8JbY+jbg/ZgaN/2ulovP0wUoGH8z6JdPntLI=,iv:CLeg/C4FinJFspeoZ93SK0yYuanl1f/cwAwqb4JSSvc=,tag:K/xsdSAeUINs7OlKMhIO/g==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData)$
     version: 3.10.2
