@@ -15,7 +15,7 @@ spec:
         namespace: traefik
       interval: 1m
   values:
-    cloudflared:
+    cloudflare:
       tunnelSecret: traefik-cloudflare-tunnel
       secretName: traefik-cloudflare-tunnel
       tunnelId: 5196f111-e3f4-44f0-bbb1-c2da7015f9af
