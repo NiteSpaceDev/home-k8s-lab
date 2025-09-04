@@ -5,3 +5,4 @@ values.yaml
 *-secret.yaml
 age-pk.txt
 age-key.yaml
+.decrypted*
