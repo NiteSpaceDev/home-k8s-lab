@@ -1,3 +1,17 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: traefik-cloudflare-dashboard-cert
+spec:
+  secretName: traefik-dashboard-cloudflare-tls
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
+  commonName: "cfdash.nite.name"
+  dnsNames:
+  - "cfdash.nite.name"
+---
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
