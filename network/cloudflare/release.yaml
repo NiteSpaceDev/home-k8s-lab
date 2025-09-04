@@ -17,6 +17,7 @@ spec:
   values:
     cloudflared:
       tunnelSecret: cf-tunnel-credentials
-      tunnel: 5196f111-e3f4-44f0-bbb1-c2da7015f9af
+      secretName: cf-tunnel-credentials
+      tunnelId: 5196f111-e3f4-44f0-bbb1-c2da7015f9af
     ingress:
       - service: traefik-cloudflare
