@@ -12,4 +12,5 @@ spec:
     name: flux-system
     namespace: flux-system
   dependsOn:
-    - name: flux-system/cilium-flux
+    - name: cilium-flux
+      namespace: flux-system
