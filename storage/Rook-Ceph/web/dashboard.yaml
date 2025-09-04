@@ -15,6 +15,6 @@ spec:
 #          namespace: traefik
       services:
         - name: rook-ceph-mgr-dashboard
-          port: 80
+          port: 7000
   tls:
     secretName: ceph-dashboard-tls
