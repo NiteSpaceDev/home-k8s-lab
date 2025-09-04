@@ -21,3 +21,4 @@ spec:
       nameservers:
         - "1.1.1.1"
         - "9.9.9.9"
+    dns01RecursiveNameservers: "1.1.1.1:53"
