@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: cf-tunnel-credentials
+type: Opaque
+stringData:
+    TunnelSecret: ENC[AES256_GCM,data:dYID7tetRMkMZi+ceg8Hu0BetAuSsifpkQZPNLCt5bTQqtfX2A6tzvwnxCA=,iv:BXSrZPft3ii3XDoka641LZ3h5pDzw6/AP2CwxgvxF0w=,tag:DmbsX/UC7IsJ+Lku1n3mlg==,type:str]
+    AccountTag: ENC[AES256_GCM,data:V83UYaNf5ywomaCI4iroMUgJZsadw7T3SfWA4uv/IX4=,iv:ly7np4YNZFOCz9Vp1gh7Ywm7XbLLRZUnbBR1wKNtDA4=,tag:1AM26AhS1aBbhNPdDEIfGg==,type:str]
+    TunnelID: ENC[AES256_GCM,data:4OzrehfEOjrW/eqnjRWBQvuyFQ8AakyQg4J6qzZh/DXIxcDC,iv:gK/usqvaDjQyjyk2VnrcHGYYFWzF/lZvTkbKpZ4DWKY=,tag:99bLgeFGCv8qYi0Npcr/IA==,type:str]
+    5196f111-e3f4-44f0-bbb1-c2da7015f9af.json: ENC[AES256_GCM,data:rT3UgvO20EhnOuLkcaDfELqORCdrgRiauzK637wtRIwKitv7WzbcB9w270lzjFCgEY5WzhPaYI6W7RCsCqHo87wYGDLbVSsbeweLEWjD0xFK9nkFCcvTIUZs1f3TdoftykC9PIPAm5sU6QawbrEyFJkRrTDwgNKKmU+HKG4NeA6s1iOqBSKCSHM2xSq9HbXoUD7MNJFWiSdaiJfqMNH6RWQpdqiIkLNldKp436TzAw==,iv:MBfFNZHXRAYuNN0rU1D5rxYzbl3MmVcmAiV0+mXifjI=,tag:m4vt4lNyxq0wzJct1tSxwQ==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age16khheln7aqhe8atf8ggxvykdqspsqpwgq5yw3y7l9zn8ezf2zausll77wa
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBhSnc1aVJIREtYVkI5cVg2
+            TkFZM3pVRUVYT0FjZTRNYzFKTWpwbDZBcUNFCmdVVkhicXVSUmhWTXVpbTZSNHRH
+            RGV4Z3F5ZDlON0FPYy9iMWgrWVlhaXcKLS0tIEJTMFUxUjV5TThXMG1qVTQ5N29C
+            bDBEREJQdktVZUFUd0dqZVRtRFVRSXcKcj5KDlBi/Syv8m13k3eyouMinjAey6Tm
+            cSiSOiGK1nFvijmRDY6d6lxb6TtNFY+BuLusH2tP5ZsqRGlp+kprkQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2025-09-04T18:16:06Z"
+    mac: ENC[AES256_GCM,data:ZFMDqArfG/aAr6XsyZBV6AKrbz5CtZJSOKsz7vsNiQUokyxQVurp+WOBaiE1N8eCsY2UBkSMIIPn4B952NniGu1oCzQYGRi2TryTFyV0Ay36pdHK/Oo8JSU3VQHixIqVoGQTe1OZuIvlKpMZIsgqzBYPSq3rXX4yEkvC0eb2ErI=,iv:zMNNPrasImBFN6QQk23ImGQRzzw8dIRvqgbjNOR/FXE=,tag:Vq1I9jdEcKM8+QDaXzIYPg==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.10.2
