@@ -54,6 +54,10 @@ spec:
           namespacePolicy:
             from: All
           mode: Terminate
+          certificateRefs:
+            - kind: Secret
+              name: traefik-selfsigned-tls
+              group: ""
     service:
       enabled: true
       type: LoadBalancer
