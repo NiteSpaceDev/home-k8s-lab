@@ -7,7 +7,6 @@ metadata:
 spec:
   entryPoints:
     - websecure
-    - web
   routes:
     - match: Host(`tfdash.nite.name`)
       kind: Rule
