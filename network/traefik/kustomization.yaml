@@ -3,5 +3,4 @@ kind: Kustomization
 namespace: traefik
 resources:
   - repo.yaml
-  - crds.yaml
   - lan-release.yaml
