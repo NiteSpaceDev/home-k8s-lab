@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: cert-manager
-      chartRef:
+      sourceRef:
         kind: OCIRepository
         name: cert-manager
         namespace: traefik
