@@ -5,3 +5,4 @@ resources:
   - repo.yaml
   - sops.yaml
   - localtdns.yaml
+  - cloudflare.yaml
