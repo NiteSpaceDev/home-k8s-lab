@@ -16,9 +16,8 @@ spec:
       interval: 1m
   values:
     cloudflare:
-      account: "7e3a23037e6c65bd03f4dff7d46fdd7e"
       tunnelName: "opilab"
       secretName: traefik-cloudflare-tunnel
-      tunnelId: 5196f111-e3f4-44f0-bbb1-c2da7015f9af
     ingress:
       - service: traefik-cloudflare
+    replicaCount: 1
