@@ -17,7 +17,7 @@ kind: IngressRoute
 metadata:
   name: traefik-cloudflare-dashboard
   annotations: 
-    external-dns.alpha.kubernetes.io/hostname: cfdash.nite.name
+    external-dns.alpha.kubernetes.io/target: cflan.nite.name
     kubernetes.io/ingress.class: traefik-cloudflare
 spec:
   entryPoints:

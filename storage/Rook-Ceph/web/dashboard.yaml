@@ -16,7 +16,7 @@ kind: IngressRoute
 metadata:
   name: ceph-dashboard
   annotations: 
-    external-dns.alpha.kubernetes.io/hostname: ceph.nite.name
+    external-dns.alpha.kubernetes.io/target: tflan.nite.name
     kubernetes.io/ingress.class: traefik-lan
 spec:
   entryPoints:
