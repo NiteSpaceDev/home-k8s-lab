@@ -25,7 +25,6 @@ spec:
     ingress:
       - hostname: "*.nitehawk.me"
         service: https://traefik-cloudflare.traefik.svc.cluster.local:443
-        scheme: https
     replica:
       allNodes: false
       count: 1
