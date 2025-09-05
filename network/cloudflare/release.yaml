@@ -15,12 +15,11 @@ spec:
         namespace: traefik
       interval: 1m
   values:
-    cloudflare:
-      tunnelSecrets:
-        existingConfigJsonFileSecret:
-          name: traefik-cloudflare-tunnel
-        existingPemFileSecret:
-          name: traefik-cloudflare-tunnel
+    tunnelSecrets:
+      existingConfigJsonFileSecret:
+        name: traefik-cloudflare-tunnel
+      existingPemFileSecret:
+        name: traefik-cloudflare-tunnel
     ingress:
       - hostname: "*.nitehawk.me"
         service: traefik-cloudflare
