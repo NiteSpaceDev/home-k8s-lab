@@ -19,5 +19,6 @@ spec:
       tunnelName: "opilab"
       secretName: traefik-cloudflare-tunnel
     ingress:
-      - service: traefik-cloudflare
+      - hostname: "*.nitehawk.me"
+        service: traefik-cloudflare
     replicaCount: 1
