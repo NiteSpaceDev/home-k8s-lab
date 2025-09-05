@@ -8,7 +8,7 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: cloudflare-tunnel
+      chart: cloudflared
       sourceRef:
         kind: HelmRepository
         name: cloudflare-repo
@@ -16,9 +16,14 @@ spec:
       interval: 1m
   values:
     cloudflare:
-      tunnelName: "opilab"
-      secretName: traefik-cloudflare-tunnel
+      tunnelSecrets:
+        existingConfigJsonFileSecret:
+          name: traefik-cloudflare-tunnel
+        existingPemFileSecret:
+          name: traefik-cloudflare-tunnel
     ingress:
       - hostname: "*.nitehawk.me"
         service: traefik-cloudflare
-    replicaCount: 1
+    replica:
+      allNodes: false
+      count: 1

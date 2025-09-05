@@ -6,4 +6,4 @@ metadata:
   namespace: traefik
 spec:
   interval: 5m0s
-  url: https://cloudflare.github.io/helm-charts
+  url: https://community-charts.github.io/helm-charts
