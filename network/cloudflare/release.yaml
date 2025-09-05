@@ -24,7 +24,8 @@ spec:
         name: traefik-cloudflare-tunnel
     ingress:
       - hostname: "*.nitehawk.me"
-        service: traefik-cloudflare
+        service: https://traefik-cloudflare.traefik.svc.cluster.local:443
+        scheme: https
     replica:
       allNodes: false
       count: 1
