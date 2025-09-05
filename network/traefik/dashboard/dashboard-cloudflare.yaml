@@ -21,7 +21,7 @@ metadata:
     kubernetes.io/ingress.class: traefik-cloudflare
 spec:
   entryPoints:
-    - web
+    - websecure
   routes:
     - match: Host(`cfdash.nite.name`)
       kind: Rule
@@ -31,3 +31,5 @@ spec:
       services:
         - name: api@internal
           kind: TraefikService
+  tls:
+    secretName: traefik-dashboard-cloudflare-tls

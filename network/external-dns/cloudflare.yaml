@@ -25,6 +25,7 @@ spec:
     provider:
       name: cloudflare
     extraArgs:
+      - --cloudflare-proxied
       - --traefik-disable-legacy
     env:
       - name: CF_API_TOKEN
