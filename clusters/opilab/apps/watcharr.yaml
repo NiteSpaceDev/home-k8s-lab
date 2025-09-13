@@ -10,7 +10,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: home-apps
-    namespace: flux-system
+    namespace: flux-apps
   dependsOn:
     - name: traefik
   decryption:
