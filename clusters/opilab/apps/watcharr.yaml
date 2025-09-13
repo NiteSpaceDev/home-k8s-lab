@@ -1,0 +1,19 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: watcharr
+  namespace: flux-apps
+spec:
+  path: ./media/watcharr
+  prune: true
+  interval: 5m
+  sourceRef:
+    kind: GitRepository
+    name: home-apps
+    namespace: flux-system
+  dependsOn:
+    - name: traefik
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-key

@@ -26,7 +26,7 @@ spec:
       - hostname: "*.nitehawk.me"
         service: http://10.105.197.194:80
       - hostname: nitehawk.me"
-        service: http://10.105.197.194:80
+        service: http://traefik-cloudflare.traefik.svc.cluster.local:80
       - service: http_status:403
     replica:
       allNodes: false
