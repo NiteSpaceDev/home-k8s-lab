@@ -11,8 +11,6 @@ spec:
     kind: GitRepository
     name: home-apps
     namespace: flux-apps
-  dependsOn:
-    - name: traefik
   decryption:
     provider: sops
     secretRef:
