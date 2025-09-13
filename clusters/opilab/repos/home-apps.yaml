@@ -7,6 +7,4 @@ spec:
   interval: 1m0s
   ref:
     branch: main
-  secretRef:
-    name: flux-system/flux-system
   url: https://github.com/nitespacedev/home-k8s-apps.git
