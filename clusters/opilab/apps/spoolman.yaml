@@ -1,0 +1,17 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: spoolman
+  namespace: flux-apps
+spec:
+  path: ./3dprinting/spoolman
+  prune: true
+  interval: 5m
+  sourceRef:
+    kind: GitRepository
+    name: home-apps
+    namespace: flux-apps
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-key
