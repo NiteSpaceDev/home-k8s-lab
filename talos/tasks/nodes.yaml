@@ -17,29 +17,24 @@ tasks:
     dir: ../opilab
     vars:
       NAME: ohm-talos
+      IP: 192.168.5.10
     cmds:
-      - talosctl apply -n {{.NAME}}.nite.name -f opilab-{{.NAME}}.yaml {{.SECURE}}
+      - talosctl apply -n {{.IP}} -f opilab-{{.NAME}}.yaml {{.SECURE}}
 
   tsu:
     desc: Config Tsukuru vm
     dir: ../opilab
     vars:
       NAME: olabtsuvm
+      IP: 192.168.5.15
     cmds:
-      - talosctl apply -n {{.NAME}}.nite.name -f opilab-{{.NAME}}.yaml {{.SECURE}}
+      - talosctl apply -n {{.IP}} -f opilab-{{.NAME}}.yaml {{.SECURE}}
 
   sumu:
     desc: Config Sumu VM
     dir: ../opilab
     vars:
       NAME: olabsumuvm
+      IP: 192.168.5.16
     cmds:
-      - talosctl apply -n {{.NAME}}.nite.name -f opilab-{{.NAME}}.yaml {{.SECURE}}
-
-  kitchen:
-    desc: Config Kitchen zotac
-    dir: ../opilab
-    vars:
-      NAME: kitchen
-    cmds:
-      - talosctl apply -n {{.NAME}}.nite.name -f opilab-{{.NAME}}.yaml {{.SECURE}}
+      - talosctl apply -n {{.IP}} -f opilab-{{.NAME}}.yaml {{.SECURE}}
