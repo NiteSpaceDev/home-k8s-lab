@@ -20,3 +20,7 @@ Orange Pi 5 Pro as a VM:  cf87cfb3b026cd326d22529834abcd664aec711e1cfaefdc185be8
 factory.talos.dev/metal-installer/cf87cfb3b026cd326d22529834abcd664aec711e1cfaefdc185be8e853b2049e:v1.10.7
 https://factory.talos.dev/image/cf87cfb3b026cd326d22529834abcd664aec711e1cfaefdc185be8e853b2049e/v1.10.7/metal-arm64.iso
 
+
+ factory.talos.dev/metal-installer/376567988ad370138ad8b2698212367b8edcb69b5fd68c80be1f2ec7d603b4ba:v1.11.0
+https://factory.talos.dev/image/376567988ad370138ad8b2698212367b8edcb69b5fd68c80be1f2ec7d603b4ba/v1.11.0/metal-amd64.iso
+
