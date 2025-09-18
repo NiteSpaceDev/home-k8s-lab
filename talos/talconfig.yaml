@@ -31,10 +31,18 @@ nodes:
     controlPlane: false
     ipAddress: 192.168.5.15
     installDisk: /dev/sda
+    nodeConfigs:
+      machineSpec:
+        mode: metal
+        arch: amd64
   - hostname: olabtsuvm
     controlPlane: false
     ipAddress: 192.168.5.16
     installDisk: /dev/sda
+    nodeConfigs:
+      machineSpec:
+        mode: metal
+        arch: amd64
 
 controlPlane:
   schematic:
@@ -52,19 +60,24 @@ controlPlane:
         path: /machine/network/nameservers
         value:
           - 192.168.4.140
-          - 192.168.4.205
-          - 192.168.4.181
             #      - op: add
             #        path: /machine/kubelet/extraArgs
             #        value:
             #          rotate-server-certificates: "true"
             #
 worker:
+  schematic:
+    customization:
+      systemExtensions:
+        officialExtensions:
+          - siderolabs/iscsi-tools
+          - siderolabs/nfsd
+          - siderolabs/nvme-cli
+          - siderolabs/qemu-guest-agent
+          - siderolabs/util-linux-tools
   patches:
     - |-
       - op: add
         path: /machine/network/nameservers
         value:
           - 192.168.4.140
-          - 192.168.4.205
-          - 192.168.4.181
