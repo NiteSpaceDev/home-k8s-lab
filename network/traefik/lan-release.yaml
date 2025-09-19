@@ -64,9 +64,13 @@ spec:
     metrics:
       prometheus:
         addRoutersLabels: true
-    accessLog:
-      format: common
-      filters:
-        statusCodes:
-          - "200"
-          - "300-302"
+        serviceMonitor:
+          enabled: true
+    logs:
+      access:
+        format: common
+        enabled: true
+        filters:
+          statusCodes:
+            - "200"
+            - "300-302"
