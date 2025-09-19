@@ -56,3 +56,12 @@ spec:
       type: LoadBalancer
       annotations: { external-dns.alpha.kubernetes.io/hostname: "cflan.nite.name" }
       labels: { color: "green" }
+    metrics:
+      prometheus:
+        addRoutersLabels: true
+        serviceMonitor:
+          enabled: true
+    logs:
+      access:
+        format: common
+        enabled: true
