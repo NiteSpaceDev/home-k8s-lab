@@ -61,3 +61,12 @@ spec:
       type: LoadBalancer
       annotations: { external-dns.alpha.kubernetes.io/hostname: tflan.nite.name }
       labels: { color: green }
+    metrics:
+      prometheus:
+        addRoutersLabels: true
+    accessLog:
+      format: common
+      filters:
+        statusCodes:
+          - "200"
+          - "300-302"
