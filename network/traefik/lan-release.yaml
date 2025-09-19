@@ -71,6 +71,6 @@ spec:
         format: common
         enabled: true
         filters:
-          statusCodes:
+          statuscodes:
             - "200"
             - "300-302"
