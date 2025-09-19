@@ -1,0 +1,40 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: prometheus-controller
+  namespace: flux-apps
+spec:
+  path: ./monitoring/controllers
+  prune: true
+  interval: 5m
+  sourceRef:
+    kind: GitRepository
+    name: home-apps
+    namespace: flux-apps
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-key
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: monitoring-configs
+  namespace: flux-apps
+spec:
+  dependsOn:
+    - name: prometheus-controller
+  interval: 1h
+  retryInterval: 2m
+  timeout: 5m
+  prune: true
+  wait: true
+  sourceRef:
+    kind: GitRepository
+    name: home-apps
+    namespace: flux-apps
+  path: ./monitoring/configs
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-key
