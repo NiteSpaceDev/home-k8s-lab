@@ -70,7 +70,3 @@ spec:
       access:
         format: common
         enabled: true
-        filters:
-          statuscodes:
-            - "200"
-            - "300-302"
