@@ -16,6 +16,8 @@ spec:
         namespace: kube-system
       interval: 1m
   values:
+    prometheus:
+      enabled: true
     ipam:
       mode: kubernetes
     hostFirewall:
