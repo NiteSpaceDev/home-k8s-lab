@@ -16,6 +16,10 @@ spec:
         namespace: traefik
       interval: 1m
   values:
+    securityContext:
+      capabilities:
+        drop: [ALL]
+        add: [NET_BIND_SERVICE]
     providers:
       kubernetesCRD:
         enabled: true
