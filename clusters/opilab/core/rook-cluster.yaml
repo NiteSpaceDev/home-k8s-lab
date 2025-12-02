@@ -4,7 +4,7 @@ metadata:
   name: rook-ceph-cluster
   namespace: rook-ceph
 spec:
-  suspend: true
+  suspend: false
   path: ./storage/Rook-Ceph/Cluster
   prune: true
   interval: 5m
