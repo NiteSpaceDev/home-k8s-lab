@@ -16,10 +16,6 @@ spec:
         namespace: traefik
       interval: 1m
   values:
-    securityContext:
-      capabilities:
-        drop: [ALL]
-        add: [NET_BIND_SERVICE]
     providers:
       kubernetesCRD:
         enabled: true
@@ -32,26 +28,26 @@ spec:
         enabled: true
     ports:
       web:
-        port: 80
+        port: 8080
         redirections:
           entryPoint:
             to: websecure
             scheme: https
             permanent: true
       websecure:
-        port: 443
+        port: 8443
     api:
       dashboard: true
       insecure: true
     gateway:
       listeners:
         web:
-          port: 80
+          port: 8080
           protocol: HTTP
           namespacePolicy:
             from: All
         websecure:
-          port: 443
+          port: 8443
           protocol: HTTPS
           namespacePolicy:
             from: All
