@@ -4,7 +4,7 @@ metadata:
   name: rook-ceph-operator
   namespace: rook-ceph
 spec:
-  suspend: true
+  suspend: false
   path: ./storage/Rook-Ceph/operator
   prune: true
   interval: 5m
