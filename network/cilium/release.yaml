@@ -19,7 +19,7 @@ spec:
     prometheus:
       enabled: true
     ipam:
-      podCIDRs: 10.200.0.0/12
+      podCIDRs: 10.192.0.0/12
     hostFirewall:
       enabled: false
     hubble:
