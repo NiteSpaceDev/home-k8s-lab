@@ -28,26 +28,26 @@ spec:
         enabled: true
     ports:
       web:
-        port: 8080
+        port: 9080
         redirections:
           entryPoint:
             to: websecure
             scheme: https
             permanent: true
       websecure:
-        port: 8443
+        port: 9443
     api:
       dashboard: true
       insecure: true
     gateway:
       listeners:
         web:
-          port: 8080
+          port: 9080
           protocol: HTTP
           namespacePolicy:
             from: All
         websecure:
-          port: 8443
+          port: 9443
           protocol: HTTPS
           namespacePolicy:
             from: All
