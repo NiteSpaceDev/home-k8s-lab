@@ -4,6 +4,7 @@ metadata:
   name: watcharr
   namespace: flux-apps
 spec:
+  suspend: true
   path: ./media/watcharr
   prune: true
   interval: 5m

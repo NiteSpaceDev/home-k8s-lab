@@ -4,6 +4,7 @@ metadata:
   name: cloudflare-tunnel
   namespace: flux-system
 spec:
+  suspend: true
   path: ./network/cloudflare
   prune: true
   interval: 5m

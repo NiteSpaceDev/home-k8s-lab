@@ -4,6 +4,7 @@ metadata:
   name: spoolman
   namespace: flux-apps
 spec:
+  suspend: true
   path: ./3dprinting/spoolman
   prune: true
   interval: 5m

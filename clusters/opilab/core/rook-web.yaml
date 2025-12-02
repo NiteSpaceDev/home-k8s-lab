@@ -4,6 +4,7 @@ metadata:
   name: rook-ceph-web
   namespace: rook-ceph
 spec:
+  suspend: true
   path: ./storage/Rook-Ceph/web
   prune: true
   interval: 5m

@@ -4,6 +4,7 @@ metadata:
   name: cert-manager
   namespace: flux-system
 spec:
+  suspend: true
   path: ./network/cert-manager
   prune: true
   interval: 5m
