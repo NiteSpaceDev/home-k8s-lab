@@ -42,12 +42,12 @@ spec:
     gateway:
       listeners:
         web:
-          port: 9080
+          port: 8080
           protocol: HTTP
           namespacePolicy:
             from: All
         websecure:
-          port: 9443
+          port: 8443
           protocol: HTTPS
           namespacePolicy:
             from: All
